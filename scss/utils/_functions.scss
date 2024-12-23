@@ -1,0 +1,4 @@
+// A function to calculate rem sizes based on the base font size
+@function rem($px) {
+  @return $px / 16 * 1rem;
+}

@@ -1,0 +1,67 @@
+//
+// @import "../base/mixins";
+// @import "../base/variables";
+
+// Features section
+.features {
+  padding: 60px 40px;
+
+  background: $bg-gradient-reverse;
+
+  .feature-title {
+    font-size: 44px;
+  }
+  @media (max-width: 430px) {
+    .feature-title {
+      font-size: 34px;
+    }
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+
+    .feature-item {
+      background-color: rgb(255, 255, 255);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: $font-color;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        color: var(--hero-heading-color);
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        color: lighten($font-color, 10%);
+      }
+      a {
+        @include button-style(
+          darken($secondary-color, 10%),
+          $font-color,
+          lighten($primary-color, 55%)
+        );
+        margin-bottom: 20px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

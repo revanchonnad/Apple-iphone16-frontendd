@@ -1,0 +1,73 @@
+$primary-color: rgb(12, 18, 71);
+$secondary-color: #f5f5f5;
+$background-color: white;
+$font-color: #333;
+$footer-bg-color: #111;
+$font-color: darkBlue;
+
+$screen-small: 440px;
+$screen-tablet: 770px;
+$heading-color: #333;
+
+$bg-gradient: linear-gradient(
+  180deg,
+  rgb(12, 18, 71),
+  rgb(40, 51, 125) 28%,
+  rgb(80, 93, 173) 46%,
+  rgb(125, 142, 209) 60%,
+  rgb(174, 188, 230) 75%,
+  rgb(239, 236, 255) 90%,
+  rgb(255, 255, 255)
+);
+$bg-gradient-reverse: linear-gradient(
+  180deg,
+  rgb(255, 255, 255),
+  rgb(239, 236, 255) 10%,
+  rgb(174, 188, 230) 25%,
+
+  #f5f5f7
+);
+$bg-gradient-2: linear-gradient(
+  180deg,
+  rgb(255, 255, 255),
+  rgb(239, 236, 255) 10%,
+  rgb(174, 188, 230) 25%,
+  rgb(80, 93, 173) 46%,
+  rgb(174, 188, 230) 25%,
+  rgb(239, 236, 255) 10%,
+  #f5f5f7
+);
+// Fonts
+$font-family-main: "Helvetica Neue", sans-serif;
+$font-size-base: 16px;
+$heading-color: #222;
+
+// Custom properties for interpolation
+//new feature
+$iphone-color: blue;
+$color-palette: (
+  primary: #007aff,
+
+  secondary: #ff9500,
+
+  accent: #ff3b30,
+
+  white: #ffffff,
+
+  light-gray: #f5f5f7,
+
+  gray: #8e8e93,
+
+  dark-gray: #4a4a4a,
+
+  black: #000000,
+);
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --button-bg-color: #{$iphone-color};
+  --hero-bg-gradient: #{$bg-gradient};
+  --hero-heading-color: black;
+}
+$btn-padding-small: 8px;
+$btn-padding-large: 16px;

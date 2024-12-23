@@ -1,0 +1,23 @@
+@function calculate-rem($px) {
+  @return $px / 16 * 1rem;
+}
+
+@function adjust-brightness($color, $percent) {
+  @return mix(black, $color, $percent);
+}
+@function dynamic-padding($base-padding, $multiplier) {
+  @return $base-padding * $multiplier;
+}
+@function darken-color($color, $amount: 10%) {
+  @return darken($color, $amount);
+}
+@function adjust-color-mode($color, $mode) {
+  @if $mode == "light" {
+    @return lighten($color, 50%);
+  } @else if $mode == "dark" {
+    @return darken($color, 50%);
+  } @else {
+    @warn "Unknown mode '#{$mode}'. Returning the original color.";
+    @return $color;
+  }
+}

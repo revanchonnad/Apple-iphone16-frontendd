@@ -1,0 +1,100 @@
+// @import "../base/mixins";
+@import "../base/variables";
+
+.buy-section {
+  padding: 40px 20px;
+  background: $bg-gradient-reverse;
+
+  .buy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  //new feature
+  .product-summary {
+    text-align: center;
+    background-color: map-get($color-palette, white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: map-get($color-palette, primary);
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: darken-color(map-get($color-palette, primary));
+    }
+  }
+
+  .purchase-options {
+    background-color: map-get($color-palette, white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 1.8rem;
+      color: map-get($color-palette, dark-gray);
+      margin-bottom: 20px;
+    }
+
+    .buy-form {
+      .option {
+        margin-bottom: 20px;
+
+        label {
+          font-size: 1rem;
+          color: map-get($color-palette, primary);
+          margin-bottom: 5px;
+          display: block;
+        }
+
+        select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid map-get($color-palette, light-gray);
+          border-radius: 8px;
+          font-size: 1rem;
+          background-color: map-get($color-palette, white);
+        }
+      }
+
+      .purchase-button {
+        display: flex;
+        justify-content: center;
+
+        button {
+          padding: 12px 40px;
+          background-color: map-get($color-palette, primary);
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken-color(map-get($color-palette, primary));
+          }
+        }
+      }
+    }
+  }
+}

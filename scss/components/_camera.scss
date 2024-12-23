@@ -1,0 +1,129 @@
+// // Camera Control Section
+// // @import "../base/mixins";
+// @import "../base/variables";
+// @import "../base/functions";
+
+// .camera-control {
+//   padding: 40px 20px;
+//   background: $bg-gradient-reverse;
+//   //   background-color: #f5f5f7;
+//   //   adjust-brightness(#f5f5f7, 15%);
+//   overflow-x: auto; // Enable horizontal scroll for the entire section
+//   scroll-snap-type: x mandatory; // Enable snapping behavior
+
+//   .camera-grid {
+//     display: flex; // Flexbox layout for horizontal alignment
+//     gap: 20px; // Add space between each camera item
+//     scroll-snap-align: center; // Ensure smooth snapping of each item into view
+//     overflow-x: auto; // Ensure grid is horizontally scrollable
+//     padding: 30px 0;
+//   }
+//   .feature-title {
+//     font-size: 44px;
+//   }
+//   .camera-item {
+//     @extend %box-style; // Reuse the placeholder for consistent box styling
+//     flex: 0 0 auto; // Prevent shrinking and allow the item to retain its width
+//     min-width: 450px; // Adjusted width to prevent items from being too large
+//     height: 500px;
+//     max-width: 400px; // Set a max-width for consistency
+//     padding: 10px;
+//     background-color: whitesmoke;
+//     border-radius: 10px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add a soft shadow for depth
+//     scroll-snap-align: center; // Each item snaps into place
+
+//     img {
+//       width: 100%; // Force images to take the full width of their container
+//       height: auto; // Maintain the aspect ratio
+//       max-height: 380px; // Set a maximum height to avoid oversized images
+//       object-fit: cover; // Ensure the image fills the container while maintaining its aspect ratio
+//       border-radius: 8px;
+//       margin-bottom: 15px;
+//     }
+
+//     .camera-text {
+//       font-size: 1rem;
+//       color: black;
+
+//       p {
+//         margin-bottom: 10px;
+//       }
+
+//       a {
+//         text-decoration: none;
+//         color: darken($primary-color, 10%);
+//         font-weight: bold;
+//         transition: color 0.3s ease;
+
+//         &:hover {
+//           color: lighten($primary-color, 15%);
+//         }
+//       }
+//     }
+//   }
+// }
+
+@import "../base/variables";
+@import "../base/functions";
+
+.camera-control {
+  padding: 40px 20px;
+  background: $bg-gradient-reverse;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  .camera-grid {
+    display: flex;
+    gap: 20px;
+    scroll-snap-align: center;
+    overflow-x: auto;
+    padding: 30px 0;
+  }
+
+  .feature-title {
+    font-size: 44px;
+  }
+
+  .camera-item {
+    @extend %box-style;
+    flex: 0 0 auto;
+    min-width: 450px;
+    height: 500px;
+    max-width: 400px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .camera-text {
+      font-size: 1rem;
+      color: black;
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: darken($primary-color, 10%);
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: lighten($primary-color, 15%);
+        }
+      }
+    }
+  }
+}

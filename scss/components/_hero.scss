@@ -1,0 +1,78 @@
+// @import "../base/mixins";
+// @import "../base/variables";
+
+.hero {
+  background: var(--hero-bg-gradient);
+  text-align: center;
+  padding: 10px 20px;
+  height: 100vh;
+
+  .hero-content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -174px;
+      left: 56px;
+      width: 90%;
+    }
+
+    a {
+      position: absolute;
+      bottom: -700px;
+      left: 650px;
+    }
+    .buy-button {
+      @include button-style(
+        lighten($primary-color, 25%),
+        white,
+        lighten($primary-color, 5%)
+      );
+    }
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1025px) {
+    .hero-content img {
+      top: -139px;
+      left: 14px;
+      //   max-width: 500px;
+    }
+
+    .hero-content a {
+      bottom: -545px;
+      left: 450px;
+    }
+  }
+  @media (max-width:#{$screen-tablet}) {
+    .hero-content img {
+      top: -79px;
+      left: 45px;
+      //   max-width: 500px;
+    }
+
+    .hero-content a {
+      bottom: -526px;
+      left: 327px;
+    }
+  }
+  @media (max-width: #{$screen-small}) {
+    .hero-content img {
+      top: 6px;
+      left: 25px;
+
+      content: url("../../images/hero2.png");
+    }
+
+    .hero-content a {
+      bottom: -542px;
+      left: 151px;
+    }
+  }
+}

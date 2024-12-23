@@ -1,0 +1,9 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.features {
+  grid-column: span 2;
+}
