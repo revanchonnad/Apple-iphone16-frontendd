@@ -64,6 +64,14 @@ body {
   text-decoration: none;
   font-weight: 300;
 }
+@media (max-width: 440px) {
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+}
+}
 
 .hero {
   background: var(--hero-bg-gradient);
@@ -129,7 +137,7 @@ body {
   .hero .hero-content img {
     top: 6px;
     left: 25px;
-    content: url("../../images/hero2.png");
+   content: url("../images/hero2.png");
   }
   .hero .hero-content a {
     bottom: -542px;
